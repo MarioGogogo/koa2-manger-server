@@ -1,0 +1,29 @@
+{
+	"files": [
+		{
+			"path": "server/routes/qiniu.js",
+			"bookmarks": [
+				{
+					"line": 32,
+					"column": 31,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "server/routes/pay.js",
+			"bookmarks": [
+				{
+					"line": 11,
+					"column": 6,
+					"label": ""
+				},
+				{
+					"line": 14,
+					"column": 22,
+					"label": ""
+				}
+			]
+		}
+	]
+}

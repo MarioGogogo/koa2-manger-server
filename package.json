@@ -1,0 +1,51 @@
+{
+  "name": "koa2_commom_api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "rm -rf dist && rm -rf .cache && npx babel server/index.js -o ./dist/index.js && NODE_ENV=development  nodemon  ./dist/index.js",
+    "delete": "rm -rf dist && rm -rf .cache ",
+    "start": "node bin/www",
+    "dev": "./node_modules/.bin/nodemon bin/www",
+    "prd": "pm2 start bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-decorators": "^7.8.3",
+    "@babel/register": "^7.8.3",
+    "babel-preset-env": "^1.7.0",
+    "log4js": "^6.3.0",
+    "md5": "^2.3.0",
+    "nodemon": "^2.0.2"
+  },
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "debug": "^4.1.1",
+    "ejs": "^3.0.1",
+    "glob": "^7.1.6",
+    "jsonwebtoken": "^8.5.1",
+    "koa": "^2.11.0",
+    "koa-body": "^4.2.0",
+    "koa-bodyparser": "^4.3.0",
+    "koa-convert": "^1.2.0",
+    "koa-json": "^2.0.2",
+    "koa-jwt": "^4.0.0",
+    "koa-logger": "^3.2.0",
+    "koa-onerror": "^4.1.0",
+    "koa-router": "^7.4.0",
+    "koa-session": "^5.8.1",
+    "koa-static": "^5.0.0",
+    "koa-views": "^6.2.0",
+    "koa2-cors": "^2.0.6",
+    "lodash": "^4.17.19",
+    "mongoose": "^5.11.19",
+    "pug": "^2.0.3",
+    "qiniu": "^7.3.2",
+    "ramda": "^0.27.0",
+    "xml2js": "^0.4.23"
+  }
+}
