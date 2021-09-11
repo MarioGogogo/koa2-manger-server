@@ -1,7 +1,7 @@
 /*
  * @Author: MarioGo
  * @Date: 2021-07-01 23:08:32
- * @LastEditTime: 2021-09-10 18:15:45
+ * @LastEditTime: 2021-09-11 20:18:34
  * @LastEditors: MarioGo
  * @Description: 文件描述
  * @FilePath: /manager-server/server/index.js
@@ -13,7 +13,7 @@ const koaStatic = require('koa-static');
 const R = require('ramda');
 const MIDDLEWARES = ['common', 'router'];
 const bodyParser = require('koa-bodyparser');
-const koajwt = require('koa-jwt')
+const koajwt = require('koa-jwt');
 
 // 错误日志
 const logger = require('koa-logger');
@@ -23,7 +23,7 @@ const onerror = require('koa-onerror');
 const koaBody = require('koa-body');
 
 //启动数据库
-require('./config/db')
+require('./config/db');
 
 /**
  * 封装中间件
@@ -45,31 +45,30 @@ const useMiddlewares = (app) => {
   // error handler
   onerror(app);
 
-  // 文件上传解析
-  app.use(koaBody({
-    multipart: true,
-    // formidable: {
-    //     maxFileSize: 2000*1024*1024    // 设置上传文件大小最大限制，默认20M
-    // }
-}));
+  /* 
+  koa-body 对应的API及使用 看这篇文章 http://www.ptbird.cn/koa-body.html
+  或者看 github上的官网 https://github.com/dlau/koa-body
+*/
+  app.use(
+    koaBody({
+      multipart: true, // 支持文件上传
+      formidable: {
+        maxFieldsSize: 20 * 1024 * 1024, // 最大文件为2兆
+        multipart: true, // 是否支持 multipart-formdate 的表单
+      },
+    })
+  );
   //解析post请求的参数
   app.use(bodyParser());
   // 配置静态资源
   const staticPath = '../views';
   app.use(koaStatic(resolve(__dirname, staticPath)));
 
-  
-
-
-
-
-
-
   // bug:过滤某些不需要token的请求  会影响其他接口
   // app.use(koajwt({ secret: 'imooc' }).unless({
   //   path: [/^\/api\/login/]
   // }))
-  
+
   // token认证失败配置
   app.use(async (ctx, next) => {
     log4js.info(`get params:${JSON.stringify(ctx.request.query)}`);
