@@ -23,7 +23,7 @@ const onerror = require('koa-onerror');
 const koaBody = require('koa-body');
 
 //启动数据库
-require('./config/db');
+// require('./config/db');
 
 /**
  * 封装中间件
