@@ -43,6 +43,8 @@
     "koa2-cors": "^2.0.6",
     "lodash": "^4.17.19",
     "mongoose": "^5.11.19",
+    "nodemailer": "^6.6.3",
+    "nodemailer-smtp-transport": "^2.7.4",
     "pug": "^2.0.3",
     "qiniu": "^7.3.2",
     "ramda": "^0.27.0",
