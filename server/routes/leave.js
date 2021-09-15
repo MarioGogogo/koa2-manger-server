@@ -1,7 +1,7 @@
 /*
  * @Author: MarioGo
  * @Date: 2021-08-22 16:49:34
- * @LastEditTime: 2021-08-23 22:58:58
+ * @LastEditTime: 2021-09-15 23:00:15
  * @LastEditors: MarioGo
  * @Description: 休假申请接口
  * @FilePath: /manager-server/server/routes/leave.js
@@ -22,14 +22,31 @@ export class leaveController {
   // 查询申请列表
   @get('/leaveList')
   async getLeaveListt(ctx) {
-    const { applyState } = ctx.request.query;
+    const { applyState,type } = ctx.request.query;
     const { page, skipIndex } = Utils.pager(ctx.request.query);
     let authorization = ctx.request.headers.authorization;
     let { data } = Utils.decoded(authorization);
     try {
-      let params = {
-        'applyUser.userId': data.userId,
-      };
+      let params = {}
+      //如果是审核人 则需要返回审核人 范围内的请假条码
+      if(type === "approval"){
+        //根据审核状态去查数据
+        if(applyState === 1){
+          //当前审核人 （当前人老板 如果经理还没审核通过 老板也看不见）
+           params.curAuditUserName = data.userName
+           params.applyState = 1
+        }else if(applyState > 1){
+             //非常重要的子文档查询 🔥🔥🔥🔥🔥🔥🔥
+             params = {"auditFlows.userId":data.userId,applyState}
+        }else{
+          params = {"auditFlows.userId":data.userId}
+        }
+      }else{
+       params = {
+          'applyUser.userId': data.userId,
+        };
+      }
+    
       //传过来的是字符串 必须转 数字
       if (Number(applyState)) params.applyState = applyState;
       const query = Leave.find(params); //promise对象
