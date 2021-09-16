@@ -1,7 +1,7 @@
 /*
  * @Author: MarioGo
  * @Date: 2021-07-01 23:08:32
- * @LastEditTime: 2021-09-11 20:18:34
+ * @LastEditTime: 2021-09-16 19:30:06
  * @LastEditors: MarioGo
  * @Description: 文件描述
  * @FilePath: /manager-server/server/index.js
@@ -23,7 +23,7 @@ const onerror = require('koa-onerror');
 const koaBody = require('koa-body');
 
 //启动数据库
-// require('./config/db');
+require('./config/db');
 
 /**
  * 封装中间件

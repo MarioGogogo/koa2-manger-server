@@ -6750,3 +6750,69 @@
 [2021-09-15T18:20:05.951] [INFO] info - post params:{}
 [2021-09-15T18:25:24.081] [INFO] info - get params:{}
 [2021-09-15T18:25:24.082] [INFO] info - post params:{}
+[2021-09-16T19:29:19.343] [INFO] info - get params:{}
+[2021-09-16T19:29:19.344] [INFO] info - post params:{"userName":"admin","userPwd":"admin"}
+[2021-09-16T19:30:11.788] [INFO] info - ***数据库连接成功***
+[2021-09-16T19:30:15.772] [INFO] info - get params:{}
+[2021-09-16T19:30:15.772] [INFO] info - post params:{"userName":"admin","userPwd":"admin"}
+[2021-09-16T19:30:16.065] [INFO] info - get params:{}
+[2021-09-16T19:30:16.065] [INFO] info - post params:{}
+[2021-09-16T19:30:16.083] [INFO] info - get params:{}
+[2021-09-16T19:30:16.083] [INFO] info - post params:{}
+[2021-09-16T19:30:19.019] [INFO] info - get params:{"applyState":"0","pageNum":"1","pageSize":"10","total":"0"}
+[2021-09-16T19:30:19.019] [INFO] info - post params:{}
+[2021-09-16T19:30:21.918] [INFO] info - get params:{"applyState":"1","pageNum":"1","pageSize":"10","type":"approval"}
+[2021-09-16T19:30:21.918] [INFO] info - post params:{}
+[2021-09-16T19:37:44.477] [INFO] info - get params:{}
+[2021-09-16T19:37:44.478] [INFO] info - post params:{}
+[2021-09-16T19:37:44.796] [INFO] info - get params:{"applyState":"1","pageNum":"1","pageSize":"10","type":"approval"}
+[2021-09-16T19:37:44.796] [INFO] info - post params:{}
+[2021-09-16T19:37:44.810] [INFO] info - get params:{}
+[2021-09-16T19:37:44.810] [INFO] info - post params:{}
+[2021-09-16T19:37:44.811] [INFO] info - get params:{}
+[2021-09-16T19:37:44.811] [INFO] info - post params:{}
+[2021-09-16T19:39:02.391] [INFO] info - get params:{}
+[2021-09-16T19:39:02.391] [INFO] info - post params:{"userName":"张三","userPwd":"123456"}
+[2021-09-16T19:39:02.521] [INFO] info - get params:{}
+[2021-09-16T19:39:02.522] [INFO] info - post params:{}
+[2021-09-16T19:39:02.524] [INFO] info - get params:{}
+[2021-09-16T19:39:02.524] [INFO] info - post params:{}
+[2021-09-16T19:39:04.948] [INFO] info - get params:{"applyState":"0","pageNum":"1","pageSize":"10","total":"0"}
+[2021-09-16T19:39:04.948] [INFO] info - post params:{}
+[2021-09-16T19:39:08.598] [INFO] info - get params:{"applyState":"1","pageNum":"1","pageSize":"10","total":"0"}
+[2021-09-16T19:39:08.598] [INFO] info - post params:{}
+[2021-09-16T19:39:48.276] [INFO] info - get params:{}
+[2021-09-16T19:39:48.277] [INFO] info - post params:{"userName":"马云","userPwd":"123456"}
+[2021-09-16T19:39:48.548] [INFO] info - get params:{}
+[2021-09-16T19:39:48.548] [INFO] info - post params:{}
+[2021-09-16T19:39:48.553] [INFO] info - get params:{}
+[2021-09-16T19:39:48.553] [INFO] info - post params:{}
+[2021-09-16T19:39:52.612] [INFO] info - get params:{"applyState":"1","pageNum":"1","pageSize":"10","type":"approval"}
+[2021-09-16T19:39:52.612] [INFO] info - post params:{}
+[2021-09-16T19:43:21.525] [INFO] info - ***数据库连接成功***
+[2021-09-16T19:43:51.660] [INFO] info - ***数据库连接成功***
+[2021-09-16T19:45:05.412] [INFO] info - get params:{}
+[2021-09-16T19:45:05.413] [INFO] info - post params:{}
+[2021-09-16T19:45:05.883] [INFO] info - get params:{"applyState":"1","pageNum":"1","pageSize":"10","type":"approval"}
+[2021-09-16T19:45:05.883] [INFO] info - post params:{}
+[2021-09-16T19:45:05.899] [INFO] info - get params:{}
+[2021-09-16T19:45:05.899] [INFO] info - post params:{}
+[2021-09-16T19:45:05.903] [INFO] info - get params:{}
+[2021-09-16T19:45:05.903] [INFO] info - post params:{}
+[2021-09-16T19:45:45.511] [INFO] info - ***数据库连接成功***
+[2021-09-16T19:46:34.107] [INFO] info - ***数据库连接成功***
+[2021-09-16T19:47:09.645] [INFO] info - ***数据库连接成功***
+[2021-09-16T19:48:17.353] [INFO] info - ***数据库连接成功***
+[2021-09-16T19:50:42.712] [INFO] info - ***数据库连接成功***
+[2021-09-16T19:51:03.494] [INFO] info - ***数据库连接成功***
+[2021-09-16T19:52:13.954] [INFO] info - ***数据库连接成功***
+[2021-09-16T19:53:17.474] [INFO] info - ***数据库连接成功***
+[2021-09-16T19:53:55.605] [INFO] info - ***数据库连接成功***
+[2021-09-16T19:54:35.289] [INFO] info - ***数据库连接成功***
+[2021-09-16T19:54:59.205] [INFO] info - ***数据库连接成功***
+[2021-09-16T19:55:01.349] [INFO] info - ***数据库连接成功***
+[2021-09-16T19:56:21.523] [INFO] info - ***数据库连接成功***
+[2021-09-16T19:56:26.461] [INFO] info - ***数据库连接成功***
+[2021-09-16T19:56:28.291] [INFO] info - ***数据库连接成功***
+[2021-09-16T19:56:55.328] [INFO] info - ***数据库连接成功***
+[2021-09-16T19:56:59.910] [INFO] info - ***数据库连接成功***
