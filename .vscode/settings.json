@@ -1,6 +1,6 @@
 {
-  "workbench.colorTheme": "Cobalt2",
+  "workbench.colorTheme": "GitHub Dark Dimmed",
   "editor.fontFamily": "Cascadia Code",
-  "editor.fontSize": 14,
+  "editor.fontSize": 15,
   "javascript.implicitProjectConfig.experimentalDecorators":true
 }

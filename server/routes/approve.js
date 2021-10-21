@@ -1,7 +1,7 @@
 /*
  * @Author: MarioGo
  * @Date: 2021-09-16 19:43:19
- * @LastEditTime: 2021-09-22 22:06:02
+ * @LastEditTime: 2021-10-02 17:00:43
  * @LastEditors: MarioGo
  * @Description: 文件描述
  * @FilePath: /manager-server/server/routes/approve.js
@@ -31,18 +31,18 @@ export class approveController {
         params.applyState = 3;
       } else {
         // 1.当审核长度已经满了说明 全部审核了
-        if(doc.auditFlows.length === doc.auditLogs.length){
+        if (doc.auditFlows.length === doc.auditLogs.length) {
           ctx.body = Utils.success('当前申请单已处理，请勿重复提交');
-          return
-        }else if(doc.auditFlows.length === doc.auditLogs.length + 1){
+          return;
+        } else if (doc.auditFlows.length === doc.auditLogs.length + 1) {
           //2.优先判断如果最后一级审批人  [A,B,C]
           params.applyState = 4;
-        }else if(doc.auditFlows.length > doc.auditLogs.length){
+        } else if (doc.auditFlows.length > doc.auditLogs.length) {
           //审核通过 当前审核人要前进一位；
-           params.applyState = 2;
-           params.curAuditUserName = doc.auditFlows[doc.auditLogs.length + 1].userName;
+          params.applyState = 2;
+          params.curAuditUserName =
+            doc.auditFlows[doc.auditLogs.length + 1].userName;
         }
-        
       }
       auditLogs.push({
         userId: data.userId,
@@ -53,7 +53,11 @@ export class approveController {
       });
       params.auditLogs = auditLogs;
       let res = await Leave.findByIdAndUpdate(_id, params);
-      console.log('%c 🍎 res: ', 'font-size:20px;background-color: #FCA650;color:#fff;', res);
+      console.log(
+        '%c 🍎 res: ',
+        'font-size:20px;background-color: #FCA650;color:#fff;',
+        res
+      );
       ctx.body = Utils.success('', '处理成功');
     } catch (error) {
       ctx.body = Utils.fail(`查询失败:${error.message}`);
